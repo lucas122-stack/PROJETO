@@ -1,0 +1,87 @@
+.grau{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    letter-spacing: 0.5rem;
+}
+ 
+#armacao{
+    text-decoration: none;
+}
+
+#armacao > h4 {
+    color: black;
+}
+
+
+
+/* -----------------catalago1------------------- */
+
+
+.catalago {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    padding-top: 5rem;
+}
+
+.catalago > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    flex-direction: column;
+    position: relative;
+}
+
+.catalago1 {
+    width: auto;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.catalago > div:hover .catalago1 {
+    transform: scale(1.1);
+}
+
+.catalago-texto {
+    text-align: center;
+    padding-top: 10px;
+    width: 100%;
+    word-wrap: break-word;
+    transition: transform 0.5s ease;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.7rem;
+}
+
+.catalago > div:hover .catalago-texto {
+    transform: scale(1.1);
+}
+
+.catalago a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.catalago a:hover .catalago-texto {
+    color: #ff6347;
+}
+
+.catalago > div a .catalago1 {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.catalago > div:hover a .catalago1 {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+

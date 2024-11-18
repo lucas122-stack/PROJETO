@@ -1,0 +1,51 @@
+/* =======================
+   Estilos para o Footer
+   ======================= */
+   footer {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    font-family: Arial, sans-serif; /* Fonte similar à da página */
+    padding: 1rem 0; /* Espaçamento interno */
+    position: relative; /* Para garantir que o footer fique no final */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos */
+    align-items: center; /* Alinha verticalmente */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 2rem; /* Espaçamento lateral */
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1; /* Garante que os três elementos ocupem o mesmo espaço */
+    text-align: center; /* Centraliza o texto */
+}
+
+.footer-left {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.footer-right {
+    text-align: right; /* Alinha os ícones à direita */
+}
+
+.footer-icons {
+    list-style: none; /* Remove a lista */
+    display: flex; /* Exibe os ícones em linha */
+    gap: 1rem; /* Espaçamento entre os ícones */
+}
+
+.footer-icons li a img {
+    width: 25px; /* Tamanho dos ícones */
+    height: 25px; /* Tamanho dos ícones */
+}
+
+.footer-left p, .footer-center p {
+    font-size: 0.8rem; /* Tamanho da fonte pequeno */
+}
+
+.footer-center p {
+    font-size: 0.9rem; /* Tamanho da fonte do copyright */
+}

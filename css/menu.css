@@ -1,0 +1,167 @@
+/* =======================
+   Estilos gerais do menu
+   ======================= */
+   .menu {
+    display: none;  /* Oculta o menu por padrão */
+    position: fixed; /* Fica fixo no topo da tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro e semitransparente */
+    z-index: 9999; /* Fica sobre o conteúdo */
+    padding-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none; /* Não interage até ser visível */
+    transform: translateY(-20px); /* Transição inicial */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.menu.show {
+    display: block; /* Torna o menu visível */
+    opacity: 1;
+    pointer-events: auto; /* Permite cliques quando visível */
+    transform: translateY(0); /* Animação de entrada */
+}
+
+.menu > ul {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em uma coluna */
+    align-items: center; /* Centraliza os itens */
+    padding: 2rem;
+    gap: 1.5rem; /* Espaçamento entre os itens */
+    margin: 0; /* Remove margem padrão */
+    list-style: none;
+}
+
+.menu > ul > li {
+    display: flex; /* Flex para centralizar verticalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.menu > ul > li > a {
+    font-size: 1.8rem; /* Tamanho de fonte ajustado */
+    color: #6d6e11; /* Cor do texto (igual antes) */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem; /* Aumenta um pouco o espaçamento entre as letras */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease, text-shadow 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.menu > ul > li > a:hover {
+    color: #eaf733; /* Cor do texto ao passar o mouse */
+    text-shadow: 0 0 10px #eaf733; /* Efeito de sombra no texto */
+    letter-spacing: 0.2rem; /* Aumenta levemente o espaçamento das letras durante o hover */
+}
+
+/* =========================
+   Estilos para telas <= 480px
+   ========================= */
+@media (max-width: 480px) {
+    /* Oculta o título "Ótica Reis" */
+    #nav2 {
+        display: none;
+    }
+
+    /* Ajuste da coroa e ícones */
+    .coroa {
+        height: 3.5rem;
+        padding-left: 0.5rem;
+    }
+
+    /* Ajusta o tamanho dos ícones no cabeçalho */
+    .icones > li > a > img {
+        height: 2rem; /* Ícones menores */
+    }
+
+    /* Menu de navegação */
+    .menu {
+        display: none; /* O menu é oculto por padrão */
+        position: fixed; /* Fica fixo sobre o conteúdo */
+        top: 0; /* Fica no topo da tela */
+        left: 0;
+        width: 100%; /* Ocupa a largura total da tela */
+        height: 100%; /* Ocupa toda a altura da tela */
+        background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+        z-index: 9999; /* Fica sobre o conteúdo */
+        padding-top: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0; /* Inicialmente invisível */
+        pointer-events: none; /* Não interage até ser visível */
+        transform: translateY(-20px); /* Transição inicial */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave */
+    }
+
+    .menu.show {
+        display: block; /* Torna o menu visível */
+        opacity: 1;
+        pointer-events: auto; /* Permite cliques quando visível */
+        transform: translateY(0); /* Animação de entrada */
+    }
+
+    .menu > ul {
+        flex-direction: column; /* Itens do menu em coluna */
+        gap: 2rem; /* Espaçamento entre os itens */
+        align-items: center; /* Centraliza os itens */
+        margin: 0;
+    }
+
+    .menu > ul > li > a {
+        font-size: 1.8rem;
+        color: #6d6e11; /* Cor do texto (igual antes) */
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+    }
+}
+
+/* =========================
+   Estilos para telas > 480px
+   ========================= */
+@media (min-width: 481px) {
+    /* Exibe o menu tradicional */
+    .menu {
+        display: block; /* Exibe o menu sempre */
+        position: relative;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+        opacity: 1; /* Torna visível */
+        pointer-events: auto; /* Permite interações */
+    }
+
+    /* Menu dentro do header */
+    .menu > ul {
+        display: flex; /* Exibe os itens do menu horizontalmente */
+        flex-direction: row; /* Itens em linha */
+        justify-content: center; /* Centraliza os itens */
+        width: 60%; /* Largura proporcional do menu */
+        margin: 0 auto; /* Centraliza a ul dentro da section */
+    }
+
+    .menu > ul > li {
+        margin: 0 2rem; /* Maior espaçamento entre os itens */
+    }
+
+    /* O menu se torna uma parte do layout normal */
+    .menu {
+        position: relative;
+        width: auto;
+        height: auto;
+        background-color: transparent; /* Menu transparente */
+        box-shadow: none; /* Sem sombra */
+        display: block; /* Exibe o menu como parte do layout */
+    }
+
+    .menu > ul > li > a {
+        text-decoration: none; /* Remove sublinhado */
+        letter-spacing: 0.2rem; /* Espaçamento mais amplo entre as letras */
+    }
+
+    .menu > ul > li > a:hover {
+        letter-spacing: 0.25rem; /* Aumenta ainda mais o espaçamento das letras durante o hover */
+        color: #eaf733; /* Cor do texto ao passar o mouse */
+        text-shadow: 0 0 10px #eaf733; /* Efeito de sombra no texto */
+    }
+}

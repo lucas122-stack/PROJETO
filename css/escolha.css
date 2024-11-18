@@ -1,0 +1,33 @@
+.escolha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#escolha {
+    text-shadow: 1px 1.5px 1.5px rgba(211, 214, 16, 0.7);
+}
+
+.escolha>#escolha {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#escolha>div>h3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 3.5rem;
+    font-size: 4rem;
+}
+
+#escolha>div>p {
+    font-size: 1.8rem;
+}
+
+#escolha>div>h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}

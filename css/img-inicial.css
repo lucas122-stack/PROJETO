@@ -1,0 +1,61 @@
+.img-container {
+    position: relative; 
+    display: inline-block;
+    text-align: center; 
+}
+
+.img-inicial img {
+    width: 100%; 
+    height: auto; 
+}
+
+.image-text {
+    position: absolute; 
+    bottom: 45%; 
+    left: 20px;
+    right: -10%; 
+    text-align: start; 
+    font-size: 3.5rem; 
+    font-family: 'otica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.3rem;
+    color: rgb(49, 49, 4); 
+
+   
+    background-color: rgba(0, 0, 0, 0); 
+    padding-left: 7.5%; 
+    margin: 0px 10% 0px 0%;
+}
+
+.image-text > a {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    transition: 0.6s;
+}
+.image-text > a:hover {
+    letter-spacing: 0.1rem;
+    text-shadow: rgb(49, 49, 4); 
+}
+
+.image-text2 {
+    position: absolute; 
+    bottom: 25px; 
+    left: 4%;
+    text-align: center; 
+    font-size: 3.5rem; 
+    background-color: rgba(0, 0, 0, 0.); 
+    padding: %;  
+}
+
+.image-text2 > a {
+    color: rgb(49, 49, 4); 
+    transition: 0.6s;
+}
+.image-text2 > a:hover {
+    letter-spacing: 0.1rem;
+    text-shadow: 16px 16px 4px rgb(202, 180, 180);
+}
+
+.image-text2 > a > img {
+    width: 15%;
+}
